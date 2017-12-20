@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">TestExRollnCode</string>
+    <string name="last_start_time_of_service">Service last start time</string>
+    <string name="counter">Counter</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
 </resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="text_size_big">16sp</dimen>
+    <dimen name="view_padding_medium">16dp</dimen>
+    <dimen name="view_padding_min">8dp</dimen>
+    <dimen name="view_margin_huge">32dp</dimen>
+
+    <dimen name="btn_elevation">8dp</dimen>
+
+</resources>
