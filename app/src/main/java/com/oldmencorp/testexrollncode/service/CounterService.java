@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.IBinder;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.oldmencorp.testexrollncode.utils.Constants;
 import com.oldmencorp.testexrollncode.repository.SharedPrefHelper;
@@ -22,7 +23,6 @@ public class CounterService extends Service {
     private Timer mTimer = new Timer();
     private ResumeReceiver mResumeReceiver;
 
-
     public CounterService() {
     }
 
@@ -31,6 +31,7 @@ public class CounterService extends Service {
         super.onCreate();
         mResumeReceiver = new ResumeReceiver();
         registerReceiver(mResumeReceiver, new IntentFilter(Constants.FILTER_ACTIVITY_RESUME));
+        Toast.makeText(this, "Service was started!", Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -55,6 +56,7 @@ public class CounterService extends Service {
         mTimer.cancel();
         unregisterReceiver(mResumeReceiver);
         Log.i(TAG, "CounterService onDestroy");
+        Toast.makeText(this, "Service was stoped!", Toast.LENGTH_SHORT).show();
     }
 
     private void updateCount() {
